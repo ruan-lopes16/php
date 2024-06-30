@@ -1,0 +1,141 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box; /*tamanho muda de acordo com o tamanho da 'caixa' definida*/
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    /*ORDEM com que quero a organização das areas da pág.*/
+    "cabecalho" 
+    "principal" 
+    "rodape";
+}
+
+.cabecalho{
+    grid-area: cabecalho; /*pegando o que foi passado em grid-template-areas*/
+    background-color: #6871ee;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+.cabecalho > h1 { /*alterando h1*/
+    margin: 0; 
+    font-weight: 300;
+    font-size: 2,8rem;
+} 
+.cabecalho > h2 { /*alterando h2*/
+    margin: 0;
+    font-weight: 200;
+    font-size: 1,6rem;
+}
+
+.principal{
+    grid-area: principal; /*pegando o que foi passado em grid-template-areas*/
+    height: calc(100vh - 180px); /*deixar area fixa*/
+    background-color: #f0f0f0;
+    padding: 20px; /*paddingg geral da pág.*/
+}
+
+.conteudo{
+    position: relative;
+    height: 100%;
+    overflow-y: scroll; /*se os elemetentos colocados de conteudo for maior - terá um scroll na ÁREA do conteudo e nao na pagina inteira*/
+    background-color: #fff;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+.rodape{
+    grid-area: rodape; /*pegando o que foi passado em grid-template-areas*/
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1,2rem;
+    padding: 0px 20px;
+    color: #444;
+}
+
+.modulos{
+    display: flex;
+    flex-wrap: wrap; /*permite quebrar linhas no FLEX*/
+    justify-content: space-around;
+}
+.modulo{
+    flex-basis: 32%; /*"largura" do elemento na tela*/
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.modulo > h3{
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+     background-color: #6871ee;
+}
+.modulo > ul{
+    margin: 0; /*tira margem padrão e coloca somente um padding */
+    padding: 10px;
+    list-style: none; /*tirar bolinhas da lista com os links*/
+}
+.modulo > ul > li {
+    padding: 7px; /*espaçamento entre os elementos do módulo - exercícios*/
+    font: 1.2rem;
+    cursor: pointer;
+}
+.modulo > ul > li > a{
+    display: flex;
+    text-decoration: none; /*tira o sublinhado do link*/
+    color: #222;
+}
+.modulo > ul > li:hover{
+    background-color: #EEE;
+}
+
+/*CORES DO MÓDULOS*/
+.modulo.verde{ border: 2px solid #4CAF50; }
+.modulo.verde > h3 { background-color: #4CAF50; }
+
+.modulo.vermelho{ border: 2px solid #F44336 }
+.modulo.vermelho > h3 { background-color: #F44336 }
+
+.modulo.azul{ border: 2px solid #2196f3; }
+.modulo.azul > h3 { background-color: #2196f3; }
+
+.modulo.roxo{ border: 2px solid #9C27B0; }
+.modulo.roxo > h3 { background-color: #9C27B0; }
+
+.modulo.laranja{ border: 2px solid #FF9800; }
+.modulo.laranja > h3 { background-color: #FF9800; }
+
+.modulo.verde-escuro{ border: 2px solid #1b5e20; }
+.modulo.verde-escuro > h3{ background-color: #1b5e20; }
+
+.modulo.amarelo{ border: 2px solid #FFD700; } /*7*/
+.modulo.amarelo{ background-color: #FFD700; }
+
+.modulo.azul-escuro{ border: 2px solid #0d47a1; } /*8*/
+.modulo.azul-escuro{ background-color: #0d47a1; }
+
+.modulo.ciano{ border: 2px solid #00FFFF; } /*9*/
+.modulo.ciano{ background-color: #00FFFF; }
+
+.modulo.rosa{ border: 2px solid #FF1493; } /*10*/
+.modulo.rosa { background-color: #FF1493; }
+
+.modulo.cinza{ border: 2px solid #4f4f4f; } /*11*/
+.modulo.cinza{ background-color: #4f4f4f; }
+
+.modulo.verde-amarelo{ border: 2px solid #adff2f; } /*12*/
+.modulo.verde-amarelo{ background-color: #adff2f; }
