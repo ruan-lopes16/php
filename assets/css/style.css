@@ -28,10 +28,11 @@ body{
     z-index: 1;
     box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
 }
-.cabecalho > h1 { /*alterando h1*/
-    margin: 0; 
-    font-weight: 300;
-    font-size: 2,8rem;
+.cabecalho > img { /*alterando h1*/
+    margin: 0;
+    
+    /*font-weight: 300;
+    font-size: 2,8rem;*/
 } 
 .cabecalho > h2 { /*alterando h2*/
     margin: 0;
@@ -59,7 +60,7 @@ body{
     grid-area: rodape; /*pegando o que foi passado em grid-template-areas*/
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 1,2rem;
     padding: 0px 20px;
