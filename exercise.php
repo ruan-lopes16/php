@@ -17,12 +17,21 @@
         <h2> PHP na prática 🎯 </h2> 
     </header>
     <nav class="navegacao">
-        <a href="#" class="verde"> SEM FORMATAÇÃO </a>
+        <a href=<?="/{$_GET['dir']}/{$_GET['file']}.php"?> class="verde"> SEM FORMATAÇÃO </a> <!-- pega o "bruto" -->
         <a href="index.php" class="vermelho"> Voltar </a>
     </nav>
     <main class="principal">
         <div class="conteudo">
-            
+            <?php
+                //include("teste/teste.php") 
+                //no navegador basta digitar = http://localhost:8080/exercise.php?dir=teste -> nada mais é que parametro para o diretório '?'
+                //include($_GET['dir'] . "/teste.php"); 
+                //include($_GET['dir] . "/" . $_GET['file] . ".php"); -ponto serve para concatenar
+                //no navegador basta digitar = http://localhost:8080/exercise.php&file=teste -> pega diretamente o arquivo '&'
+                //include("{$_GET['dir']}/{$_GET['file']}.php");
+
+                include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php"); //pega caminho absoluto
+            ?>
         </div>
 
     </main>

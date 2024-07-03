@@ -25,7 +25,7 @@
                 <div class="modulo verde">
                     <h3>MÓDULO 01 - </h3>
                     <ul> <!-- link para acesso ao exercício -->
-                        <li> <a href="exercise.php"> EXERCÍCIOS </a> </li>
+                        <li> <a href="exercise.php?dir=teste&file=teste"> EXERCÍCIOS </a> </li> <!--não coloca .php, pois já foi colocado na descrição do outro arquivo-->
                         <li> <a href="#"> ... </a> </li>
                         <li> <a href="#"> ... </a> </li>
                         <li> <a href="#"> ... </a> </li>
